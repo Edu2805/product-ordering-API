@@ -1,9 +1,24 @@
 <p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/logoSpring.png" width="80px"/></p>
 
-# Spring boot project
+# Spring Boot project - Order Rest API
 
 Advanced Spring boot project using some functional programming concepts.
 This project also includes some concepts of BoundedContext
+
+### New features
+* Customer order inquiry
+* Order status change
+* Custom error messages
+* Inclusion of a message translation key for Portuguese, English and Spanish.
+
+Message in Portuguese
+<p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/portugues.png" width="280px"/></p>
+
+Message in English
+<p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/ingles.png" width="280px"/></p>
+
+Message in Spanish
+<p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/espanhol.png" width="280px"/></p>
 
 ### Reference Documentation
 For further reference, please consider the following sections:
