@@ -28,3 +28,68 @@ Message in Spanish
 
 ### Payloads
 
+```bash
+http://localhost:8080/client
+To register a customer - Post method
+
+{
+    "name": "Client Name",
+    "cpf": "00000000000"
+}
+########################################################
+
+http://localhost:8080/client/{uuidClient}
+To change data for a particular customer - Put method
+
+{
+    "name": "Client Name",
+    "cpf": "00000000000"
+}
+########################################################
+
+http://localhost:8080/product
+To register a product in the database - Post method
+
+{
+    "description": "Product description",
+    "price": 00.00
+}
+########################################################
+
+http://localhost:8080/product/{idProduct}
+To change a product in the database - Put method
+
+{
+    "description": "Product description",
+    "price": 00.00
+}
+########################################################
+
+http://localhost:8080/purchase
+To register an order - Post method
+
+{
+    "client": "insert client UUID",
+    "total": 00.00,
+    "itemPurchases": [
+        {
+            "product": "insert product UUID",
+            "quantity": 1
+        }
+    ]
+}
+########################################################
+
+http://localhost:8080/purchase/{uuidPurchase}
+To change the status of an order to DONE or CANCELED - Path method
+
+{
+    "newStatus": "CANCELED"
+}
+
+OR
+
+{
+    "newStatus": "DONE"
+}
+```
