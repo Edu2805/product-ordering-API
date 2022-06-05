@@ -12,13 +12,13 @@ This project also includes some concepts of BoundedContext
 * Inclusion of a message translation key for Portuguese, English and Spanish.
 
 Message in Portuguese
-<p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/portugues.png" width="280px"/></p>
+<p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/portugues.png" width="380px"/></p>
 
 Message in English
-<p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/ingles.png" width="280px"/></p>
+<p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/ingles.png" width="380px"/></p>
 
 Message in Spanish
-<p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/espanhol.png" width="280px"/></p>
+<p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/espanhol.png" width="380px"/></p>
 
 ### Reference Documentation
 For further reference, please consider the following sections:
