@@ -1,6 +1,6 @@
 <p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/logoSpring.png" width="80px"/></p>
 
-<h1 align="center">🛒  Boot project - Order Rest API 🛒</h1>
+<h1 align="center">🛒  Spring Boot project - Order Rest API 🛒</h1>
 <h2 align="center"> 💻 Advanced Spring boot project using some functional programming concepts. This project also includes some concepts of BoundedContext 💻</h2>
 
 ### New features
