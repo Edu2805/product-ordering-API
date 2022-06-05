@@ -1,9 +1,7 @@
 <p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/logoSpring.png" width="80px"/></p>
 
-# Spring Boot project - Order Rest API
-
-Advanced Spring boot project using some functional programming concepts.
-This project also includes some concepts of BoundedContext
+<h1 align="center">🛒  Boot project - Order Rest API 🛒</h1>
+<h2 align="center"> 💻 Advanced Spring boot project using some functional programming concepts. This project also includes some concepts of BoundedContext 💻</h2>
 
 ### New features
 * Customer order inquiry
@@ -113,3 +111,5 @@ OR
 <p>🔗 http://localhost:8080/purchase/{uuidPurchase}</p>
 <hr>
 <p>NOTE: It is possible to use the params feature to perform queries/filters by CLIENT name and PRODUCT name by typing any letter, for that, use the endpoints:  🔗 http://localhost:8080/client and 🔗 http://localhost:8080/product</p>
+
+<h4 align="center"> 🚧 Project under construction 🚧</h4>
