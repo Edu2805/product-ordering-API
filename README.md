@@ -98,10 +98,10 @@ OR
 
 <h4 align="center">Endpoints for tests</h4>
 <p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Get.png" title="Readme"/>Consult a client</p>
-<p>🔗 http://localhost:8080/empresa](http://localhost:8080/client/{uuidClient}</p>
+<p>🔗 http://localhost:8080/client/{uuidClient}</p>
 <hr>
 <p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Del.png" title="Readme"/>Delete a client</p>
-<p>🔗 http://localhost:8080/empresa](http://localhost:8080/client/{uuidClient}</p>
+<p>🔗 http://localhost:8080/client/{uuidClient}</p>
 <hr>
 <p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Get.png" title="Readme"/>Consult a product</p>
 <p>🔗 http://localhost:8080/product/{uuidProduct}</p>
@@ -112,4 +112,4 @@ OR
 <p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Get.png" title="Readme"/>Consult an purchase</p>
 <p>🔗 http://localhost:8080/purchase/{uuidPurchase}</p>
 <hr>
-<p>NOTE: It is possible to use the paramos feature to perform queries/filters by CLIENT name and PRODUCT name by typing any letter, for that, use the endpoints:  🔗 http://localhost:8080/client and 🔗 http://localhost:8080/product</p>
+<p>NOTE: It is possible to use the params feature to perform queries/filters by CLIENT name and PRODUCT name by typing any letter, for that, use the endpoints:  🔗 http://localhost:8080/client and 🔗 http://localhost:8080/product</p>
