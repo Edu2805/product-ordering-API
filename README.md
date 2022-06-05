@@ -93,3 +93,37 @@ OR
     "newStatus": "DONE"
 }
 ```
+
+### Other endpoints
+
+<h4 align="center">End-Points para testes</h4>
+<p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Get.png" title="Readme"/>Lista completa de empresas cadastradas</p>
+<p>🔗 http://localhost:8080/empresa</p>
+<hr>
+<p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Get.png" title="Readme"/>Lista de fazendas de uma empresa</p>
+<p>🔗 http://localhost:8080/fazenda/listarfazendasempresa/{id}</p>
+<hr>
+<p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Get.png" title="Readme"/>Quantidade de fazendas de uma empresa</p>
+<p>🔗 http://localhost:8080/fazenda/quantidadefazendas/{id}</p>
+<hr>
+<p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Get.png" title="Readme"/>Lista de fazendas de uma empresa (ID, nome, data previsão colheita, tempo médio de colheita)</p>
+<p>🔗 http://localhost:8080/fazenda/listafazendasdetalhadas/{id}</p>
+<hr>
+<p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Put.png" title="Readme"/>Registro de colheita (Entrada de grãos no estoque)</p>
+<p>🔗 http://localhost:8080/fazenda/registraentradacolheita/{id}</p>
+<hr>
+<p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Put.png" title="Readme"/>Registro de colheita (Saída de grãos no estoque)</p>
+<p>🔗 http://localhost:8080/fazenda/registrasaidacolheita/{id}</p>
+<hr>
+<p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Get.png" title="Readme"/>Lista de grãos de uma empresa</p>
+<p>🔗 http://localhost:8080/grao/listargraosempresa/{id}</p>
+<hr>
+<p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Get.png" title="Readme"/>Lista de grãos (nome do grão, quantidade de estoque em ordem ascendente)</p>
+<p>🔗 http://localhost:8080/fazenda/estoquegraoscrescente/{id}</p>
+<hr>
+<p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Get.png" title="Readme"/>Lista de funcionários de uma empresa</p>
+<p>🔗 http://localhost:8080/funcionario/listarfuncionariosempresa/{id}</p>
+<hr>
+<p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Get.png" title="Readme"/>Quantidade de funcionários de uma empresa</p>
+<p>🔗 http://localhost:8080/funcionario/quantidadefuncionarios/{id}</p>
+<hr>
