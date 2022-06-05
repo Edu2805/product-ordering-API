@@ -6,8 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.List;
 import java.util.UUID;
 
@@ -24,8 +26,11 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     @Column(nullable = false, length = 60)
+    @NotEmpty(message = "{name.field-required}")
     private String name;
     @Column(nullable = false, length = 11)
+    @NotEmpty(message = "{cpf.field-required}")
+    @CPF(message = "{invalid.cpf-field}")
     private String cpf;
 
     @JsonIgnore

@@ -9,6 +9,7 @@ import com.springbootexpert.vendas.itempurchase.ItemPurchaseDto;
 import com.springbootexpert.vendas.itempurchase.ItemPurchaseRepository;
 import com.springbootexpert.vendas.product.Product;
 import com.springbootexpert.vendas.product.ProductRepository;
+import com.springbootexpert.vendas.purchase.dto.PurchaseDto;
 import com.springbootexpert.vendas.purchase.enums.PurchaseStatus;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

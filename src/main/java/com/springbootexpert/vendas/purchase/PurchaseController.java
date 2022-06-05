@@ -2,6 +2,7 @@ package com.springbootexpert.vendas.purchase;
 
 import com.springbootexpert.vendas.itempurchase.ItemPurchase;
 import com.springbootexpert.vendas.purchase.dto.ItemPurchaseInformationDTO;
+import com.springbootexpert.vendas.purchase.dto.PurchaseDto;
 import com.springbootexpert.vendas.purchase.dto.PurchaseInformationDTO;
 import com.springbootexpert.vendas.purchase.dto.UpdatePurchaseStatusDTO;
 import com.springbootexpert.vendas.purchase.enums.PurchaseStatus;
@@ -10,6 +11,7 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.validation.Valid;
 import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.List;
@@ -28,7 +30,7 @@ public class PurchaseController {
 
     @PostMapping
     @ResponseStatus(CREATED)
-    public UUID save (@RequestBody PurchaseDto purchaseDto){
+    public UUID save (@RequestBody @Valid PurchaseDto purchaseDto){
         Purchase purchase = purchaseService.save(purchaseDto);
         return purchase.getId();
     }

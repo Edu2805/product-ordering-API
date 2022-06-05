@@ -2,6 +2,9 @@ package com.springbootexpert.vendas.client;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+
 import static org.springframework.http.HttpStatus.*;
 
 import java.util.List;
@@ -22,7 +25,7 @@ public class ClientController {
 
     @PostMapping
     @ResponseStatus(CREATED)
-    public Client save (@RequestBody Client client){
+    public Client save (@RequestBody @Valid Client client){
         return clientService.save(client);
     }
 
@@ -34,7 +37,7 @@ public class ClientController {
 
     @PutMapping("/{id}")
     @ResponseStatus(NO_CONTENT)
-    public void update(@RequestBody Client client, @PathVariable UUID id){
+    public void update(@RequestBody @Valid Client client, @PathVariable UUID id){
         clientService.update(client, id);
     }
 

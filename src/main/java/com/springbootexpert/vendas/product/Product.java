@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.util.UUID;
 
@@ -22,7 +24,9 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     @Column(nullable = false, length = 60)
+    @NotEmpty(message = "{description.field-required}")
     private String description;
     @Column(nullable = false)
+    @NotNull(message = "{price.field-required}")
     private BigDecimal price;
 }

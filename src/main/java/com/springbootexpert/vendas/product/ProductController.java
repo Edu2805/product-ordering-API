@@ -2,6 +2,9 @@ package com.springbootexpert.vendas.product;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+
 import static org.springframework.http.HttpStatus.*;
 
 import java.util.List;
@@ -17,13 +20,13 @@ public class ProductController {
 
     @PostMapping
     @ResponseStatus(CREATED)
-    public Product save (@RequestBody Product product){
+    public Product save (@RequestBody @Valid Product product){
         return productService.save(product);
     }
 
     @PutMapping("/{id}")
     @ResponseStatus(NO_CONTENT)
-    public void update (@RequestBody Product product, @PathVariable UUID id){
+    public void update (@RequestBody @Valid Product product, @PathVariable UUID id){
         productService.update(product, id);
     }
 

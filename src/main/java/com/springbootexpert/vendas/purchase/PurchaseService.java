@@ -1,5 +1,6 @@
 package com.springbootexpert.vendas.purchase;
 
+import com.springbootexpert.vendas.purchase.dto.PurchaseDto;
 import com.springbootexpert.vendas.purchase.enums.PurchaseStatus;
 
 import java.util.Optional;
