@@ -2,6 +2,7 @@ package com.springbootexpert.vendas.purchase;
 
 import com.springbootexpert.vendas.client.Client;
 import com.springbootexpert.vendas.itempurchase.ItemPurchase;
+import com.springbootexpert.vendas.purchase.enums.PurchaseStatus;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,6 +30,9 @@ public class Purchase {
     private LocalDate datePurchase;
     @Column(name = "prurchase_total", precision = 20, scale = 2)
     private BigDecimal total;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status_pedido")
+    private PurchaseStatus purchaseStatus;
 
     @ManyToOne
     @JoinColumn(name = "client_id")
