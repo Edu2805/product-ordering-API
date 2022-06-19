@@ -8,6 +8,7 @@
 * Order status change
 * Custom error messages
 * Inclusion of a message translation key for Portuguese, English and Spanish.
+* Application of unit tests with Mockito JUnit5 (in process)
 
 Message in Portuguese
 <p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/portugues.png" width="380px"/></p>
