@@ -9,6 +9,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
@@ -18,6 +19,8 @@ import java.util.Optional;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
@@ -87,8 +90,29 @@ class ClientServiceTest {
     }
 
     @Test
-    void save() {
+    void whenSaveThenReturnSucess() {
+        when(clientRepositoryMock.save(any())).thenReturn(client);
+
+        Client response = clientService.save(client);
+
+        assertNotNull(response);
+        assertEquals(Client.class, response.getClass());
+        assertEquals(UUID, response.getId());
+        assertEquals(NAME, response.getName());
     }
+
+    @Test
+    void whenSaveThenReturnDataIntegrityViolationException() {
+        String uuid = "bcf9634c-ab40-47c7-8f5f-45e93735afbf";
+        when(clientRepositoryMock.findById(UUID)).thenReturn(optionalClient);
+
+        try{
+            optionalClient.get().setId(java.util.UUID.fromString(uuid));
+            Client response = clientService.save(client);
+        } catch (Exception ex){
+            assertEquals(DataIntegrityViolationException.class, ex.getClass());
+        }
+    }//outro tipo de teste
 
     @Test
     void delete() {

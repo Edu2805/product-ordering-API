@@ -26,23 +26,23 @@ public class ClientController {
     @PostMapping
     @ResponseStatus(CREATED)
     public Client save (@RequestBody @Valid Client client){
-        return clientService.save(client);
+        return clientService.save(client);//
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(NO_CONTENT)
     public void delete(@PathVariable UUID id){
-        clientService.delete(id);
+        clientService.delete(id);//
     }
 
     @PutMapping("/{id}")
     @ResponseStatus(NO_CONTENT)
     public void update(@RequestBody @Valid Client client, @PathVariable UUID id){
-        clientService.update(client, id);
+        clientService.update(client, id);//
     }
 
     @GetMapping("/filter")
     public List<Client> filterClients (Client filter){
-        return clientService.filterClients(filter);
+        return clientService.filterClients(filter);//
     }
 }
