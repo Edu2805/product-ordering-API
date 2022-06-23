@@ -1,9 +1,10 @@
 package com.springbootexpert.vendas.config;
 
-import com.springbootexpert.vendas.service.impl.UserServiceImpl;
+import com.springbootexpert.vendas.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -16,7 +17,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     @Lazy
-    public UserServiceImpl userService;
+    public UserService userService;
 
     @Bean
     public PasswordEncoder passwordEncoder(){
@@ -37,10 +38,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/client/**")
                 .hasAnyRole("USER", "ADMIN")
-                .antMatchers("/product/**")
-                .hasRole("ADMIN")
                 .antMatchers("/purchase/**")
                 .hasAnyRole("USER", "ADMIN")
+                .antMatchers("/product/**")
+                .hasRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "/user/**")
+                .permitAll()
+                .anyRequest().authenticated()
                 .and()
                 .httpBasic();
     }
