@@ -1,4 +1,4 @@
-package com.springbootexpert.vendas;
+package com.springbootexpert.vendas.security.jwt;
 
 import com.springbootexpert.vendas.user.UserData;
 import io.jsonwebtoken.Claims;
@@ -8,6 +8,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
@@ -25,9 +26,8 @@ public class JwtService {
         LocalDateTime expirationDateTime = LocalDateTime.now()
                 .plusMinutes(expString);
 
-        Date date = Date.from(expirationDateTime
-                .atZone(ZoneId.systemDefault())
-                .toInstant());
+        Instant instant = expirationDateTime.atZone(ZoneId.systemDefault()).toInstant();
+        Date date = Date.from(instant);
         return Jwts
                 .builder()
                 .setSubject(userData.getLogin())

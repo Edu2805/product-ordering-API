@@ -8,6 +8,7 @@
 * Order status change
 * Custom error messages
 * Inclusion of a message translation key for Portuguese, English and Spanish.
+* Authentication application using JWT
 * Application of unit tests with Mockito JUnit5 (in process)
 
 Message in Portuguese

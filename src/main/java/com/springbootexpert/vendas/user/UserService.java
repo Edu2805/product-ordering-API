@@ -1,5 +1,6 @@
 package com.springbootexpert.vendas.user;
 
+import com.springbootexpert.vendas.exception.InvalidPasswordException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,8 +21,18 @@ public class UserService implements UserDetailsService {
     private UserRepository userRepository;
 
     @Transactional
-    public UserData save(UserData userData){
+    public UserData save(UserData userData){ //
         return userRepository.save(userData);
+    }
+
+    public UserDetails authenticate(UserData userData){
+        var userDetails = loadUserByUsername(userData.getLogin());
+        var samePassword = passwordEncoder.matches(userData.getPassword(), userDetails.getPassword());
+
+        if (samePassword){
+            return userDetails;
+        }
+        throw new InvalidPasswordException();
     }
 
     @Override
