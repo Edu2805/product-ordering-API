@@ -33,6 +33,25 @@ Swagger documentation
 ### Payloads
 
 ```bash
+http://localhost:8080/user
+To register a user - Post method
+
+{
+    "login": "userName",
+    "password": "password"
+}
+########################################################
+
+http://localhost:8080/user/auth
+To generate the token after user registration - Post method
+
+{
+    "login": "userNameAlreadyRegisteredInTheDatabase",
+    "password": "passwordAlreadyRegisteredInTheDatabase"
+}
+
+########################################################
+
 http://localhost:8080/client
 To register a client - Post method
 
