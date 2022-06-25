@@ -14,11 +14,12 @@ import static org.springframework.http.HttpStatus.*;
 @AllArgsConstructor
 
 @Service
+public
 class ClientService {
 
     ClientRepository clientRepository;
 
-    Client getClientById (UUID id){
+    public Client getClientById(UUID id){
         return clientRepository
                 .findById(id)
                 .orElseThrow(() -> {
@@ -27,11 +28,11 @@ class ClientService {
                 });
     }
 
-    Client save (Client client){
+    public Client save(Client client){
         return clientRepository.save(client);
     }
 
-    void delete(UUID id){
+    public void delete(UUID id){
         clientRepository.findById(id)
                 .map(client -> {
                     clientRepository.delete(client);

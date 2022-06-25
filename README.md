@@ -10,6 +10,7 @@
 * Inclusion of a message translation key for Portuguese, English and Spanish.
 * Authentication application using JWT
 * Application of unit tests with Mockito JUnit5 (in process)
+* Swagger documentation APIs
 
 Message in Portuguese
 <p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/portugues.png" width="380px"/></p>
@@ -19,6 +20,9 @@ Message in English
 
 Message in Spanish
 <p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/espanhol.png" width="380px"/></p>
+
+Swagger documentation
+<p align="center"><img height="80px" src="https://github.com/Edu2805/product-ordering-API/blob/main/img/swagger.png"/></p>
 
 ### How to use the application
 * You must connect to a database, for this you must perform the necessary settings in the application.properties file

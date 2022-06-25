@@ -14,15 +14,16 @@ import static org.springframework.http.HttpStatus.*;
 @AllArgsConstructor
 
 @Service
+public
 class ProductService {
 
     ProductRepository productRepository;
 
-    Product save (Product product){
+    public Product save(Product product){
         return productRepository.save(product);
     }
 
-    void update (Product product, UUID id){
+    public void update(Product product, UUID id){
         productRepository
                 .findById(id)
                 .map( p -> {
@@ -33,7 +34,7 @@ class ProductService {
                         new ResponseStatusException(NOT_FOUND, "Produto não encontrado"));
     }
 
-    void delete (UUID id){
+    public void delete(UUID id){
         productRepository
                 .findById(id)
                 .map( p -> {
@@ -43,14 +44,14 @@ class ProductService {
                         new ResponseStatusException(NOT_FOUND, "Produto não encontrado"));
     }
 
-    Product getById(UUID id){
+    public Product getById(UUID id){
         return productRepository
                 .findById(id)
                 .orElseThrow( () ->
                         new ResponseStatusException(NOT_FOUND, "Produto não encontrado"));
     }
 
-    List<Product> findAll(Product productFilter){
+    public List<Product> findAll(Product productFilter){
         ExampleMatcher matcher = ExampleMatcher
                 .matching()
                 .withIgnoreCase()
