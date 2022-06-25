@@ -26,7 +26,7 @@ Swagger documentation
 
 ### How to use the application
 * You must connect to a database, for this you must perform the necessary settings in the application.properties file
-* For requests, you can use tools like Postman, Insomnia or another application
+* For requests, you can use tools like Postman, Insomnia or access http://localhost:8080/swagger-ui.html#/product-controller for use API by Swagger
 * After downloading the repository, reload the pom.xml, run the compile and start the application.
 * Below are the payloads for testing
 
