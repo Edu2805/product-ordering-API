@@ -51,7 +51,7 @@ public class ProductController {
             @ApiResponse(code= 204, message = "Produto deletado com sucesso"),
             @ApiResponse(code=404, message = "Produto não encontrado para o id informado")
     })
-    public void delete (@PathVariable @ApiParam("Id do produto") UUID id){//
+    public void delete (@PathVariable @ApiParam("Id do produto") UUID id){
         productService.delete((id));
     }
 
@@ -61,7 +61,7 @@ public class ProductController {
             @ApiResponse(code= 200, message = "Produto encontrado"),
             @ApiResponse(code=404, message = "Produto não encontrado para o id informado")
     })
-    public Product getById(@PathVariable UUID id){//
+    public Product getById(@PathVariable UUID id){
         return productService.getById(id);
     }
 
@@ -70,7 +70,7 @@ public class ProductController {
     @ApiResponses({
             @ApiResponse(code= 200, message = "Produto listados"),
     })
-    public List<Product> findAll(Product productFilter){//
+    public List<Product> findAll(Product productFilter){
         return productService.findAll(productFilter);
     }
 }

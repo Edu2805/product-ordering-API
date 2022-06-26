@@ -39,7 +39,7 @@ public class ClientController {
             @ApiResponse(code= 201, message = "Cliente salvo com sucesso"),
             @ApiResponse(code=400, message = "Erro de validação")
     })
-    public Client save (@RequestBody @Valid Client client){//
+    public Client save (@RequestBody @Valid Client client){
         return clientService.save(client);
     }
 
@@ -50,7 +50,7 @@ public class ClientController {
             @ApiResponse(code= 204, message = "Cliente deletado com sucesso"),
             @ApiResponse(code=404, message = "Cliente não encontrado para o id informado")
     })
-    public void delete(@PathVariable @ApiParam("Id do cliente") UUID id){//
+    public void delete(@PathVariable @ApiParam("Id do cliente") UUID id){
         clientService.delete(id);
     }
 
@@ -61,13 +61,13 @@ public class ClientController {
             @ApiResponse(code= 204, message = "Cliente alterado com sucesso"),
             @ApiResponse(code=404, message = "Cliente não encontrado para o id informado")
     })
-    public void update(@RequestBody @Valid Client client, @PathVariable @ApiParam("Id do cliente") UUID id){//
+    public void update(@RequestBody @Valid Client client, @PathVariable @ApiParam("Id do cliente") UUID id){
         clientService.update(client, id);
     }
 
     @GetMapping("/filter")
     @ApiOperation("Filtra cliente")
-    public List<Client> filterClients (Client filter){//
+    public List<Client> filterClients (Client filter){
         return clientService.filterClients(filter);
     }
 }
