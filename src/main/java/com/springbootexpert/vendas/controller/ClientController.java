@@ -28,7 +28,7 @@ public class ClientController {
             @ApiResponse(code= 200, message ="Cliente encontrado"),
             @ApiResponse(code=404, message = "Cliente não encontrado para o id informado")
     })
-    public Client getClientById (@PathVariable @ApiParam("Id do cliente") UUID id){//
+    public Client getClientById (@PathVariable @ApiParam("Id do cliente") UUID id){
         return clientService.getClientById(id);
     }
 

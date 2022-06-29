@@ -4,10 +4,12 @@ import com.springbootexpert.geradorcpfcnpj.GeraCpfCnpj;
 import com.springbootexpert.vendas.client.Client;
 import com.springbootexpert.vendas.client.ClientService;
 import com.springbootexpert.vendas.purchase.Purchase;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Example;
@@ -18,6 +20,8 @@ import java.util.UUID;
 
 import static java.util.UUID.randomUUID;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
 
 @SpringBootTest
 class ClientControllerTest {
@@ -52,7 +56,16 @@ class ClientControllerTest {
     }
 
     @Test
-    void getClientById() {
+    void whenGetClientByIdThenReturnSuccess() {
+        when(clientService.getClientById(any())).thenReturn(client);
+
+        var clientById = clientController.getClientById(UUID);
+
+        assertNotNull(clientById);
+        assertNotNull(clientById.getClass());
+        assertEquals(Client.class, clientById.getClass());
+        assertEquals(UUID, clientById.getId());
+        assertEquals(NAME, clientById.getName());
     }
 
     @Test
