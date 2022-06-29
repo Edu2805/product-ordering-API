@@ -12,7 +12,6 @@ import java.util.UUID;
 import static org.springframework.http.HttpStatus.*;
 
 @AllArgsConstructor
-
 @Service
 public
 class ClientService {
