@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 import static org.springframework.http.HttpStatus.*;
@@ -28,6 +29,17 @@ class ClientService {
     }
 
     public Client save(Client client){
+        clientRepository.findAll().forEach(find -> {
+            if(Objects.equals(find.getId(), client.getId())){
+                throw new ResponseStatusException(CONFLICT,
+                        "ID já existente na base de dados");
+            }
+
+            if(Objects.equals(find.getCpf(), client.getCpf())){
+                throw new ResponseStatusException(CONFLICT,
+                        "CPF já existente na base de dados");
+            }
+        });
         return clientRepository.save(client);
     }
 

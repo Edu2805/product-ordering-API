@@ -24,6 +24,9 @@ Message in Spanish
 Swagger documentation
 <p align="center"><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/swagger.png"/></p>
 
+Test coverage
+<p align="center"><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Test.png"/></p>
+
 ### How to use the application
 * You must connect to a database, for this you must perform the necessary settings in the application.properties file
 * For requests, you can use tools like Postman, Insomnia or access http://localhost:8080/swagger-ui.html for use API by Swagger

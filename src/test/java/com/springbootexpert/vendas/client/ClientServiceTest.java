@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.stubbing.OngoingStubbing;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Example;
@@ -22,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.springframework.data.domain.ExampleMatcher.matching;
-import static org.springframework.http.HttpStatus.NOT_FOUND;
+import static org.springframework.http.HttpStatus.*;
 
 @SpringBootTest
 class ClientServiceTest {
@@ -99,17 +100,14 @@ class ClientServiceTest {
     }
 
     @Test
-    void whenSaveThenReturnDataIntegrityViolationException() {
-        String uuid = "bcf9634c-ab40-47c7-8f5f-45e93735afbf";
-        when(clientRepositoryMock.findById(UUID)).thenReturn(optionalClient);
+    void whenSaveThenReturnResponseStatusExceptionSameId() {
 
-        try{
-            optionalClient.get().setId(fromString(uuid));
-            Client response = clientServiceMock.save(client);
-        } catch (Exception ex){
-            assertEquals(DataIntegrityViolationException.class, ex.getClass());
-        }
-    }// fazer validação no método save para não permitir dois ids e dois cpfs
+    }
+
+    @Test
+    void whenSaveThenReturnResponseStatusExceptionSameCpf() {
+
+    }
 
     @Test
     void whenFindByIdWithSucessAndDelete() {
