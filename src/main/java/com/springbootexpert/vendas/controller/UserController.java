@@ -32,6 +32,7 @@ public class UserController {
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
 
+    @PreAuthorize("isAuthenticated()")
     @PostMapping
     @ResponseStatus(CREATED)
     @ApiOperation("Cadastrar um usuário")
@@ -45,6 +46,7 @@ public class UserController {
         return userService.save(userData);
     }
 
+    @PreAuthorize("isAuthenticated()")
     @PostMapping("/auth")
     @ApiOperation("Gera o token de acesso após cadastro de um usuário")
     @ApiResponses({
