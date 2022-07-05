@@ -73,7 +73,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 "/swagger-resources/**",
                 "/configuration/security",
                 "/swagger-ui.html",
-                "/webjars/**",
-                "https://purchase-orders-api-edu.herokuapp.com/user/**");
+                "/webjars/**");
     }
 }
