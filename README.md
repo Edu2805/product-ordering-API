@@ -28,116 +28,30 @@ Test coverage
 <p align="center"><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Test.png"/></p>
 
 ### How to use the application
-* You must connect to a database, for this you must perform the necessary settings in the application.properties file
-* For requests, you can use tools like Postman, Insomnia or access http://localhost:8080/swagger-ui.html for use API by Swagger
-* After downloading the repository, reload the pom.xml, run the compile and start the application.
-* Below are the payloads for testing
+* You can access the API at https://purchase-orders-api-edu.herokuapp.com/swagger-ui.html
+* Once you are on the page, you will need to create a user to authenticate
+<p align="center"><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/user.png"/></p>
 
-### Payloads
+* Register a user
+<p align="center"><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/user.png"/></p>
+<br>
+<p align="center"><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/tryitout.png"/></p>
 
-```bash
-http://localhost:8080/user
-To register a user - Post method
+* Fill in user information
+<p align="center"><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/UserPayload.png"/></p>
 
-{
-    "login": "userName",
-    "password": "password"
-}
-########################################################
+* After registering, enter your username and password and copy the token
+<p align="center"><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/AuthPayload.png"/></p>
+<br>
+<p align="center"><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/token.png"/></p>
 
-http://localhost:8080/user/auth
-To generate the token after user registration - Post method
+* On the home page, go to Authorize
+<p align="center"><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/authorize.png"/></p>
 
-{
-    "login": "userNameAlreadyRegisteredInTheDatabase",
-    "password": "passwordAlreadyRegisteredInTheDatabase"
-}
+* Write Bearer, give a space and paste your user token
+<p align="center"><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/copytoken.png"/></p>
 
-########################################################
-
-http://localhost:8080/client
-To register a client - Post method
-
-{
-    "name": "Client Name",
-    "cpf": "00000000000"
-}
-########################################################
-
-http://localhost:8080/client/{uuidClient}
-To change data for a particular client - Put method
-
-{
-    "name": "Client Name",
-    "cpf": "00000000000"
-}
-########################################################
-
-http://localhost:8080/product
-To register a product in the database - Post method
-
-{
-    "description": "Product description",
-    "price": 00.00
-}
-########################################################
-
-http://localhost:8080/product/{idProduct}
-To change a product in the database - Put method
-
-{
-    "description": "Product description",
-    "price": 00.00
-}
-########################################################
-
-http://localhost:8080/purchase
-To register an order - Post method
-
-{
-    "client": "insert client UUID",
-    "total": 00.00,
-    "itemPurchases": [
-        {
-            "product": "insert product UUID",
-            "quantity": 1
-        }
-    ]
-}
-########################################################
-
-http://localhost:8080/purchase/{uuidPurchase}
-To change the status of an order to DONE or CANCELED - Path method
-
-{
-    "newStatus": "CANCELED"
-}
-
-OR
-
-{
-    "newStatus": "DONE"
-}
-```
-
-### Other endpoints
-
-<h4 align="center">Endpoints for tests</h4>
-<p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Get.png" title="Readme"/>Consult a client</p>
-<p>🔗 http://localhost:8080/client/{uuidClient}</p>
-<hr>
-<p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Del.png" title="Readme"/>Delete a client</p>
-<p>🔗 http://localhost:8080/client/{uuidClient}</p>
-<hr>
-<p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Get.png" title="Readme"/>Consult a product</p>
-<p>🔗 http://localhost:8080/product/{uuidProduct}</p>
-<hr>
-<p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Del.png" title="Readme"/>Delete a product</p>
-<p>🔗 http://localhost:8080/product/{uuidProduct}</p>
-<hr>
-<p><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Get.png" title="Readme"/>Consult an purchase</p>
-<p>🔗 http://localhost:8080/purchase/{uuidPurchase}</p>
-<hr>
-<p>NOTE: It is possible to use the params feature to perform queries/filters by CLIENT name and PRODUCT name by typing any letter, for that, use the endpoints:  🔗 http://localhost:8080/client and 🔗 http://localhost:8080/product</p>
+* Token is active for 30 minutes, now you can make requests
+<p align="center"><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/request.png"/></p>
 
 <h4 align="center"> 🚧 Project under construction 🚧</h4>
