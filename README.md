@@ -30,7 +30,6 @@ Test coverage
 ### How to use the application
 * You can access the API at https://purchase-orders-api-edu.herokuapp.com/swagger-ui.html
 * Once you are on the page, you will need to create a user to authenticate
-<p align="center"><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/user.png"/></p>
 
 * Register a user
 <p align="center"><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/user.png"/></p>
