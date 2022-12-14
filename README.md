@@ -28,7 +28,7 @@ Test coverage
 <p align="center"><img src="https://github.com/Edu2805/product-ordering-API/blob/main/img/Test.png"/></p>
 
 ### How to use the application
-* You can access the API at http://184.73.99.64/swagger-ui.html
+* You can access the API at http://54.173.212.55/swagger-ui.html
 * Once you are on the page, you will need to create a user to authenticate
 
 * Register a user
