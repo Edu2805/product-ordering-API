@@ -9,7 +9,7 @@ cache:
     - .m2/repository
     - target/
 
-stages:
+stages:          # List of stages for jobs, and their order of execution
   - test
   - build
   - deploy
@@ -29,9 +29,9 @@ build:
     paths:
       - target/vendas-0.0.1-SNAPSHOT.jar
 
-prodction:
+production:
   stage: deploy
   script:
     - echo "Deploy teste"
   only:
-    main
+    - main
