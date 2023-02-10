@@ -71,6 +71,7 @@ public class ProductController {
             @ApiResponse(code= 200, message = "Produto listados"),
     })
     public List<Product> findAll(Product productFilter){
+        
         return productService.findAll(productFilter);
     }
 }
